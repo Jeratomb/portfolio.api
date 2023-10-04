@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Development\\Rayen_Projects\\portfolio.api\\portfolio.api\\portfolio.api.csproj": {}
+    "D:\\Development\\Rayen_Projects\\portfolio.api\\portfolio.api.csproj": {}
   },
   "projects": {
-    "D:\\Development\\Rayen_Projects\\portfolio.api\\portfolio.api\\portfolio.api.csproj": {
+    "D:\\Development\\Rayen_Projects\\portfolio.api\\portfolio.api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Development\\Rayen_Projects\\portfolio.api\\portfolio.api\\portfolio.api.csproj",
+        "projectUniqueName": "D:\\Development\\Rayen_Projects\\portfolio.api\\portfolio.api.csproj",
         "projectName": "portfolio.api",
-        "projectPath": "D:\\Development\\Rayen_Projects\\portfolio.api\\portfolio.api\\portfolio.api.csproj",
+        "projectPath": "D:\\Development\\Rayen_Projects\\portfolio.api\\portfolio.api.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "D:\\Development\\Rayen_Projects\\portfolio.api\\portfolio.api\\obj\\",
+        "outputPath": "D:\\Development\\Rayen_Projects\\portfolio.api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config"
