@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Primitives;
 
 namespace portfolio.api.Controllers;
 
@@ -15,19 +16,27 @@ public class ProjectController : ControllerBase
         _logger = logger;
     }
 
+    [Produces("application/json")]
     [HttpGet(Name = "GetProjects")]
+    [EnableCors]
     public IEnumerable<MyProject> Get()
     {
-        _logger.Log(LogLevel.Information, "Get call");
-        return Enumerable.Range(1, 15).Select(index => new MyProject
+        StringValues originValues;
+        if (Request.Headers.Keys.Contains("Origin"))
+        {
+            Request.Headers.TryGetValue("Origin", out originValues);
+            _logger.Log(LogLevel.Information, "origin: " + originValues);
+            Console.WriteLine("origin: " + originValues);
+        }
+        var resutls = Enumerable.Range(1, 15).Select(index => new MyProject
         {
             Id = Guid.NewGuid(),
-            Name = "Test-Project-"+index ,
+            Name = "Test-Project-" + index,
             Description = "Test-Project-Description",
             CreationDate = DateTime.UtcNow,
-            LastUpdateDate =  DateTime.UtcNow.AddDays(index)
+            LastUpdateDate = DateTime.UtcNow.AddDays(index)
         })
-        .ToArray();
-   
+                .ToList();
+        return resutls;
     }
 }
