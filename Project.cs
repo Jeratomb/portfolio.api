@@ -11,5 +11,6 @@ public class Project
     public List<Knowledge> UsedSkills {get; set;}
 
     public DateTime CreationDate { get; set; }
+    
     public DateTime LastUpdateDate { get; set; }
 }
