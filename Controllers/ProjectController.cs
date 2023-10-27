@@ -16,14 +16,19 @@ public class ProjectController : ControllerBase
     }
 
     [HttpGet(Name = "GetProjects")]
-    public IEnumerable<MyProject> Get()
+    public IEnumerable<Project> Get()
     {
         _logger.Log(LogLevel.Information, "Get call");
-        return Enumerable.Range(1, 15).Select(index => new MyProject
+        var knowledges = new Knowledges();
+        Random rnd = new Random();
+        knowledges._knowledges.RemoveRange(0, rnd.Next(0,8));
+
+        return Enumerable.Range(1, 15).Select(index => new Project
         {
             Id = Guid.NewGuid(),
             Name = "Test-Project-"+index ,
             Description = "Test-Project-Description",
+            UsedSkills = knowledges._knowledges,
             CreationDate = DateTime.UtcNow,
             LastUpdateDate =  DateTime.UtcNow.AddDays(index)
         })

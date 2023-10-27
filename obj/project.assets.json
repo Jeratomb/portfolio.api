@@ -460,25 +460,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ADMIN\\.nuget\\packages\\": {}
+    "C:\\Users\\fjertila\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Development\\Rayen_Projects\\portfolio.api\\portfolio.api.csproj",
+      "projectUniqueName": "C:\\private\\DEV\\portfolio\\portfolio.api\\portfolio.api.csproj",
       "projectName": "portfolio.api",
-      "projectPath": "D:\\Development\\Rayen_Projects\\portfolio.api\\portfolio.api.csproj",
-      "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-      "outputPath": "D:\\Development\\Rayen_Projects\\portfolio.api\\obj\\",
+      "projectPath": "C:\\private\\DEV\\portfolio\\portfolio.api\\portfolio.api.csproj",
+      "packagesPath": "C:\\Users\\fjertila\\.nuget\\packages\\",
+      "outputPath": "C:\\private\\DEV\\portfolio\\portfolio.api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\fjertila\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net7.0"
       ],
       "sources": {
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+        "https://www.nuget.org/api/v2/": {}
       },
       "frameworks": {
         "net7.0": {
@@ -524,7 +526,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
