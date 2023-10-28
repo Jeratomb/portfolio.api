@@ -1,16 +1,18 @@
 # https://hub.docker.com/_/microsoft-dotnet
 FROM mcr.microsoft.com/dotnet/sdk:7.0-alpine AS build
-WORKDIR /App
+WORKDIR /app
+EXPOSE 80
 
-# Copy everything
-COPY . ./
-# Restore as distinct layers
+# copy project csproj file and restore it in docker directory
+COPY ./*.csproj ./
 RUN dotnet restore
-# Build and publish a release
+
+# Copy everything into the docker directory and build
+COPY . .
 RUN dotnet publish -c Release -o out
 
-# final stage/image
+# Build runtime final image
 FROM mcr.microsoft.com/dotnet/aspnet:7.0-alpine-amd64
-WORKDIR /publish
-COPY --from=publish /App/out .
-ENTRYPOINT ["portfolio.api.exe", "portfolio.api.dll"]
+WORKDIR /app
+COPY --from=build /app/out .
+ENTRYPOINT ["dotnet", "portfolio.api.dll"]

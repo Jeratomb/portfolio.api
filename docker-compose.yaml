@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: portfolio-api-dotnetcore
+    image: portfolio-api:latest
+    build:
+      context: .
+    environment:
+    - ASPNETCORE_ENVIRONMENT=Development
+    - ASPNETCORE_URLS=http://+:4444
+    ports:
+      - 4444:4444
