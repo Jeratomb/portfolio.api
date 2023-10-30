@@ -47,4 +47,34 @@ public class ProjectController : ControllerBase
 
         return resutls;
     }
+    // private readonly IHttpClientFactory _httpClientFactory;
+
+    // public ProjectController(IHttpClientFactory httpClientFactory)
+    // {
+    //     _httpClientFactory = httpClientFactory;
+    // }
+
+    // [HttpGet(Name = "GetProjects")]
+    // public async Task<IActionResult> Get()
+    // {
+
+    //     var client = _httpClientFactory.CreateClient();
+
+    //     var githubApiUrl = "https://api.github.com/users/Jeratomb";
+
+
+    //     HttpResponseMessage response = await client.GetAsync(githubApiUrl);
+
+    //     if (response.IsSuccessStatusCode)
+    //     {
+    //         string content = await response.Content.ReadAsStringAsync();
+
+    //         return Ok(content);
+    //     }
+    //     else
+    //     {
+
+    //         return StatusCode((int)response.StatusCode, "Fehler bei der Anfrage an die GitHub-API.");
+    //     }
+    // }
 }
