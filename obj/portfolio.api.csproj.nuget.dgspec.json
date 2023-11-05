@@ -1,28 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\private\\DEV\\portfolio\\portfolio.api\\portfolio.api.csproj": {}
+    "D:\\Development\\Rayen_Projects\\portfolio.api\\portfolio.api.csproj": {}
   },
   "projects": {
-    "C:\\private\\DEV\\portfolio\\portfolio.api\\portfolio.api.csproj": {
+    "D:\\Development\\Rayen_Projects\\portfolio.api\\portfolio.api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\private\\DEV\\portfolio\\portfolio.api\\portfolio.api.csproj",
+        "projectUniqueName": "D:\\Development\\Rayen_Projects\\portfolio.api\\portfolio.api.csproj",
         "projectName": "portfolio.api",
-        "projectPath": "C:\\private\\DEV\\portfolio\\portfolio.api\\portfolio.api.csproj",
-        "packagesPath": "C:\\Users\\fjertila\\.nuget\\packages\\",
-        "outputPath": "C:\\private\\DEV\\portfolio\\portfolio.api\\obj\\",
+        "projectPath": "D:\\Development\\Rayen_Projects\\portfolio.api\\portfolio.api.csproj",
+        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
+        "outputPath": "D:\\Development\\Rayen_Projects\\portfolio.api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\fjertila\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
-          "https://www.nuget.org/api/v2/": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
@@ -42,11 +40,27 @@
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[7.0.3, )"
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.13, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[7.0.11, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.4.0, )"
+              "version": "[6.5.0, )"
             }
           },
           "imports": [
@@ -68,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

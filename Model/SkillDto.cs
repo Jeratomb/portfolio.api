@@ -9,13 +9,13 @@ public enum Scale
 }
 
 
-public class Skill
+public class SkillDto
 {
     public Guid _id { get; set; }
 
     public string _name { get; set; }
 
-    public Knowledge _knowledge { get; set; }
+    public KnowledgeDto _knowledge { get; set; }
     public Scale _scale { get; set; }
 
 }

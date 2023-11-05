@@ -15,21 +15,21 @@ namespace portfolio.api.Controllers
         }
 
         [HttpGet(Name = "GetSkills")]
-        public IEnumerable<Skill> Get()
+        public IEnumerable<SkillDto> Get()
         {
 
-            var knowledges = new Knowledges();
+            var KnowledgeList = new KnowledgeList();
 
             Array values = Enum.GetValues(typeof(Scale));
             Random random = new Random();
 
             _logger.Log(LogLevel.Information, "Get call");
 
-            var returnValue = Enumerable.Range(0, 8).Select(index => new Skill
+            var returnValue = Enumerable.Range(0, 8).Select(index => new SkillDto
             {
                 _id = Guid.NewGuid(),
                 _name = "Test-Project-" + index,
-                _knowledge = knowledges._knowledges.ElementAt(index),
+                _knowledge = KnowledgeList._knowledges.ElementAt(index),
                 _scale = (Scale)values.GetValue(random.Next(0,3))
 
             })

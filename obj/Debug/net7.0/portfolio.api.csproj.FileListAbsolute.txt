@@ -64,3 +64,13 @@ C:\private\DEV\portfolio\portfolio.api\obj\Debug\net7.0\refint\portfolio.api.dll
 C:\private\DEV\portfolio\portfolio.api\obj\Debug\net7.0\portfolio.api.pdb
 C:\private\DEV\portfolio\portfolio.api\obj\Debug\net7.0\portfolio.api.genruntimeconfig.cache
 C:\private\DEV\portfolio\portfolio.api\obj\Debug\net7.0\ref\portfolio.api.dll
+D:\Development\Rayen_Projects\portfolio.api\bin\Debug\net7.0\Humanizer.dll
+D:\Development\Rayen_Projects\portfolio.api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+D:\Development\Rayen_Projects\portfolio.api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Development\Rayen_Projects\portfolio.api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Development\Rayen_Projects\portfolio.api\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Development\Rayen_Projects\portfolio.api\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+D:\Development\Rayen_Projects\portfolio.api\bin\Debug\net7.0\Mono.TextTemplating.dll
+D:\Development\Rayen_Projects\portfolio.api\bin\Debug\net7.0\Npgsql.dll
+D:\Development\Rayen_Projects\portfolio.api\bin\Debug\net7.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+D:\Development\Rayen_Projects\portfolio.api\bin\Debug\net7.0\System.CodeDom.dll
