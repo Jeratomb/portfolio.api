@@ -31,21 +31,27 @@ public class ProjectController : ControllerBase
 
         var knowledges = new Knowledges();
         Random rnd = new Random();
-        knowledges._knowledges.RemoveRange(0, rnd.Next(0, 8));
 
-
-        var resutls = Enumerable.Range(1, 15).Select(index => new Project
+        var results = Enumerable.Range(1, 15).Select(index => new Project
         {
             Id = Guid.NewGuid(),
             Name = "Test-Project-" + index,
             Description = "Test-Project-Description",
-            UsedSkills = knowledges._knowledges,
+            UsedSkills = GetRandomSkills(knowledges._knowledges, rnd), // Verwenden Sie die Methode GetRandomSkills
             CreationDate = DateTime.UtcNow,
             LastUpdateDate = DateTime.UtcNow.AddDays(index)
         })
-                .ToList();
+        .ToList();
 
-        return resutls;
+        return results;
+    }
+
+    private List<Knowledge> GetRandomSkills(List<Knowledge> knowledges, Random rnd)
+    {
+        int numSkills = rnd.Next(1, knowledges.Count + 2);
+        List<Knowledge> randomSkills = knowledges.OrderBy(x => rnd.Next()).Take(numSkills).ToList();
+
+        return randomSkills;
     }
     // private readonly IHttpClientFactory _httpClientFactory;
 
