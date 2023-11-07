@@ -23,6 +23,9 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddEntityFrameworkNpgsql().AddDbContext<PortfolioDbContext>(options => 
 options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+//builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

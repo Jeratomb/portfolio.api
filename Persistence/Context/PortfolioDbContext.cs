@@ -33,22 +33,27 @@ namespace portfolio.api.Persistence.Context
 
         public IQueryable<Project> GetProjectQuery(CancellationToken cancellationToken, bool onlyForReadOperation) =>
         onlyForReadOperation ? Projects.AsNoTracking().Include(x => x.Knowledges) : Projects.Include(x => x.Knowledges);
-        public IQueryable<Knowledge> GetKnowldgeQuery(CancellationToken cancellationToken, bool onlyForReadOperation) =>
-        onlyForReadOperation ? Knowledges.AsNoTracking() : Knowledges;
 
-        public void GetProjectWithKnowledges(CancellationToken cancellationToken)
-        {
-            var query = Projects
-            .Include(p => p.Knowledges
-            .Select(kn => kn.Project));
+
+        public IQueryable<Project> GetProject(Guid projectId, CancellationToken cancellationToken, bool onlyForReadOperation) =>
+        onlyForReadOperation ? Projects.AsNoTracking().Include(x => x.Knowledges).Where(x=>x.Id == projectId) : Projects.Include(x => x.Knowledges).Where(x=>x.Id == projectId);
+
+        // public IQueryable<Knowledge> GetKnowldgeQuery(CancellationToken cancellationToken, bool onlyForReadOperation) =>
+        // onlyForReadOperation ? Knowledges.AsNoTracking() : Knowledges;
+
+        // public void GetProjectWithKnowledges(CancellationToken cancellationToken)
+        // {
+        //     var query = Projects
+        //     .Include(p => p.Knowledges
+        //     .Select(kn => kn.Project));
             
-            //         select new ProjectDto { 
-            // Id= project.Id,
-            //  Name=project.Name,
-            //   Description= project.Description,
-            //    UsedSkills= new KnowledgeDto{Id=knowledge.Id, Name=knowledge.Name}
+        //     //         select new ProjectDto { 
+        //     // Id= project.Id,
+        //     //  Name=project.Name,
+        //     //   Description= project.Description,
+        //     //    UsedSkills= new KnowledgeDto{Id=knowledge.Id, Name=knowledge.Name}
 
-           Console.WriteLine("TESt");
-        }
+        //    Console.WriteLine("TESt");
+        // }
     }
 }
