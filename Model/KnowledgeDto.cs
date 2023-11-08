@@ -1,11 +1,13 @@
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
+
 namespace portfolio.api
 {
     public class KnowledgeDto
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public string KnowledgeCategory { get; set; }
-        public Guid KnowledgeCategoryId { get; set; }
     }
     public class KnowledgeList
     {

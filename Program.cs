@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using portfolio.api.Persistence.Context;
+using portfolio.api.Services;
 
 
 var  MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
@@ -24,6 +25,7 @@ builder.Services.AddCors(options =>
 builder.Services.AddEntityFrameworkNpgsql().AddDbContext<PortfolioDbContext>(options => 
 options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddScoped<IProjectService, ProjectService>();
 //builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 var app = builder.Build();
