@@ -33,7 +33,7 @@ public class ProjectController : ControllerBase
     [EnableCors]
     public async Task<IActionResult> Get()
     {
-        var projects = _projectService.GetProjectList(CancellationToken.None);
+        var projects = await _projectService.GetProjectList(CancellationToken.None);
 
         return projects == null ? NotFound() : Ok(projects);
     }
@@ -45,12 +45,13 @@ public class ProjectController : ControllerBase
     [EnableCors]
     public async Task<IActionResult> Get(Guid Id)
     {
-        var project = _projectService.GetProjectById(Id, CancellationToken.None);
+        var project = await _projectService.GetProjectById(Id, CancellationToken.None);
 
         return project == null ? NotFound() : Ok(project);
     }
 
     [Produces("application/json")]
+    [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(ProjectDto))]
     [HttpPost]
     public async Task<ActionResult<Project>> Post(ProjectDto projectDto)
     {
