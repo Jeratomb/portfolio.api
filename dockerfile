@@ -4,7 +4,7 @@ WORKDIR /app
 EXPOSE 80
 
 # copy project csproj file and restore it in docker directory
-COPY ./*.csproj ./
+COPY ./src/*.csproj ./
 RUN dotnet restore
 
 # Copy everything into the docker directory and build
