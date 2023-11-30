@@ -38,7 +38,7 @@ public class ProjectController : ControllerBase
         {
             Id = Guid.NewGuid(),
             Name = "Test-Project-" + index,
-            Description = "Test-Project-Description",
+            Description = "This is a Test Description \nThis is a Test Description\nThis is a Test Description ",
             UsedSkills = knowledges._knowledges,
             CreationDate = DateTime.UtcNow,
             LastUpdateDate = DateTime.UtcNow.AddDays(index)
