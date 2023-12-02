@@ -25,7 +25,7 @@ builder.Services.AddCors(options =>
 builder.Services.AddEntityFrameworkNpgsql().AddDbContext<PortfolioDbContext>(options => 
 options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddScoped<IProjectService, ProjectService>();
+builder.Services.AddSingleton<IProjectService, ProjectService>();
 //builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 var app = builder.Build();

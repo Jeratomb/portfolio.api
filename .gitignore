@@ -11,4 +11,7 @@ out/
 /node_modules
 /wwwroot/node_modules
 
+#db
+db-data/
+
 # End of https://www.toptal.com/developers/gitignore/api/dotnetcore
